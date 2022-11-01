@@ -2,6 +2,7 @@
 
 namespace App\Http\Dto\product;
 
+use Spatie\LaravelData\Attributes\Validation\IntegerType;
 use Spatie\LaravelData\Attributes\Validation\StringType;
 use Spatie\LaravelData\Data;
 use Symfony\Contracts\Service\Attribute\Required;
@@ -13,9 +14,9 @@ class CreateProductDto extends Data
         public string $name,
         #[StringType, Required]
         public string $unit,
-        #[StringType, Required]
-        public int $price,
-        #[StringType, Required]
+        #[Required]
+        public float $price,
+        #[IntegerType, Required]
         public int $amount,
     )
     {}

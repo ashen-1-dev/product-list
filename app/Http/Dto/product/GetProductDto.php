@@ -10,7 +10,7 @@ class GetProductDto extends Data
         public int $id,
         public string $name,
         public string $unit,
-        public int $price,
+        public float $price,
         public int $amount,
     )
     {}

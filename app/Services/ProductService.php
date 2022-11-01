@@ -9,7 +9,7 @@ use App\Models\Product;
 class ProductService
 {
     /** @return GetProductDto[] */
-    public function getProducts(): array
+    public function getProducts()
     {
         return Product::all()->map(fn ($x) => GetProductDto::from($x));
     }
